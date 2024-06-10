@@ -30,5 +30,5 @@ variable "username" {
 }
 variable "password" {
   type = string
-#   default = "Olanike@1973"
+#   default = "Halifax@1234"
 }

@@ -1,5 +1,5 @@
 module "linux-vm" {
-  source = "git::https://github.com/temi-otc/TF-Modules.git//Linux-VM-Mod"
+  source = "git::https://github.com/temi-otc/TF-Modules//Linux-VM-Mod"
   rg = var.rg
   location = var.location
   subnet = var.subnet
