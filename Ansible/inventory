@@ -1,0 +1,1 @@
+remote_node ansible_host=ub-vm.uksouth.cloudapp.azure.com ansible_user="__VM_ADMIN__" ansible_ssh_pass= "__VM_PASSWORD__"
