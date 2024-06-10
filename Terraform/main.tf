@@ -1,4 +1,4 @@
-module "linux vm" {
+module "linux-vm" {
   source = "git::https://github.com/temi-otc/TF-Modules//linux-VM-Mod"
   rg = var.rg
   location = var.location
