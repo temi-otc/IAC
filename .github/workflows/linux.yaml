@@ -32,12 +32,12 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
           enable-AzPSSession: true
 
-      - name: replcae token
-        uses: cschleiden/replace-tokens@v1
-        with:
-         tokenPrefix: '__'
-         tokenSuffix: '__'
-         files: '["**/*.tf"]'
+      # - name: replcae token
+      #   uses: cschleiden/replace-tokens@v1
+      #   with:
+      #    tokenPrefix: '__'
+      #    tokenSuffix: '__'
+      #    files: '["**/*.tf"]'
   
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3

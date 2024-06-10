@@ -28,10 +28,10 @@ variable "vm-name" {
 
 variable "username" {
   type = string
-  default = "__VM_ADMIN__"
+  # default = "__VM_ADMIN__"
 }
 
 variable "password" {
   type = string
-  default = "__VM_PASSWORD__"
+  # default = "__VM_PASSWORD__"
 }
