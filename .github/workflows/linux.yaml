@@ -35,9 +35,9 @@ jobs:
       - name: replcae token
         uses: cschleiden/replace-tokens@v1
         with:
-        tokenPrefix: '__'
-        tokenSuffix: '__'
-        files: '["**/*.tf"]'
+         tokenPrefix: '__'
+         tokenSuffix: '__'
+         files: '["**/*.tf"]'
   
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
@@ -64,7 +64,7 @@ jobs:
         run: terraform apply -auto-approve 
 
    Ansible:
-    needs: [terraform]
+    needs: [Terraform]
     defaults:
       run:
        working-directory: ./Ansible
