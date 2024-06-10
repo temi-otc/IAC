@@ -24,11 +24,14 @@ variable "ipcon" {
 variable "vm-name" {
   type = string
 }
-variable "username" {
-  type = string
-#   default = "temi"
-}
-variable "password" {
-  type = string
-#   default = "Halifax@1234"
-}
+
+
+# variable "username" {
+#   type = string
+# #   default = "temi"
+# }
+
+# variable "password" {
+#   type = string
+# #   default = "Halifax@1234"
+# }
