@@ -8,6 +8,6 @@ module "linux-vm" {
   ipcon = var.ipcon
   pip = var.pip
   vm-name = var.vm-name
-  username = "__VM_ADMIN__"
-  password = "__VM_PASSWORD__"
+  username = var.username
+  password = var.password
 }

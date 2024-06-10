@@ -26,12 +26,12 @@ variable "vm-name" {
 }
 
 
-# variable "username" {
-#   type = string
-# #   default = "temi"
-# }
+variable "username" {
+  type = string
+  default = "__VM_ADMIN__"
+}
 
-# variable "password" {
-#   type = string
-# #   default = "Halifax@1234"
-# }
+variable "password" {
+  type = string
+  default = "__VM_PASSWORD__"
+}
