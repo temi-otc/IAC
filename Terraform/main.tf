@@ -1,5 +1,5 @@
 module "linux-vm" {
-  source = "git::https://github.com/temi-otc/TF-Modules//Linux-VM-Mod"
+  source = "git::https://github.com/temi-otc/TF-Modules.git//Linux-VM-Mod"
   rg = var.rg
   location = var.location
   subnet = var.subnet
@@ -8,6 +8,6 @@ module "linux-vm" {
   ipcon = var.ipcon
   pip = var.pip
   vm-name = var.vm-name
-  admin_username = "__VM_ADMIN__"
-  admin_password = "__VM_PASSWORD__"
+  username = "__VM_ADMIN__"
+  password = "__VM_PASSWORD__"
 }
