@@ -1,0 +1,23 @@
+name: delete tf resources
+on:
+ workflow_dispatch:
+
+jobs:
+  TF-destroy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v3
+
+      - name: login to azure
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          enable-AzPSSession: true
+    
+      - name: Run Azure PowerShell inline script
+        uses: azure/powershell@v2
+        with:
+            inlineScript: |
+              Remove-AzResourceGroup -Name "IAC1"
+            azPSVersion: "latest"
