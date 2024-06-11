@@ -1,5 +1,8 @@
 name: delete tf resources
 on:
+ push:
+   branches:
+     - main
  workflow_dispatch:
 
 jobs:
@@ -19,5 +22,5 @@ jobs:
         uses: azure/powershell@v2
         with:
             inlineScript: |
-              Remove-AzResourceGroup -Name "IAC1"
+              Remove-AzResourceGroup -Name "IAC1" -Force
             azPSVersion: "latest"
