@@ -65,28 +65,28 @@ jobs:
         id: Apply
         run: terraform apply -auto-approve 
 
-   Ansible:
-    needs: [Terraform]
-    defaults:
-      run:
-       working-directory: ./Ansible
+  #  Ansible:
+  #   needs: [Terraform]
+  #   defaults:
+  #     run:
+  #      working-directory: ./Ansible
 
 
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout repository
-        uses: actions/checkout@v3
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: checkout repository
+  #       uses: actions/checkout@v3
 
-      - name: Install SSH pass
-        run: |
-          sudo apt update -y
-          sudo apt install sshpass -y
-          sshpass -v
+  #     - name: Install SSH pass
+  #       run: |
+  #         sudo apt update -y
+  #         sudo apt install sshpass -y
+  #         sshpass -v
 
-      - name: Run ansible-script
-        run: |
-          service ssh status
-          ansible-playbook linux.yaml -i inventory
+  #     - name: Run ansible-script
+  #       run: |
+  #         service ssh status
+  #         ansible-playbook linux.yaml -i inventory
 
 
 
